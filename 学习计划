@@ -1,0 +1,12 @@
+1.golang基础和api
+2.docker& CI/CD
+3.mysql和go调用
+4.redis和go调用
+5.mongoDB和go调用
+6.golang微服务框架
+7.微服务其他知识,服务发现&注册&通信,熔断&降级,API网关,统一验证&授权,分布式追踪&日志,统一性能监控等
+可参考学习.net core的方式
+https://www.cnblogs.com/edisonchou/p/dotnetcore_microservice_foundation_blogs_index_final.html
+--随便写点什么
+--刷leetcode
+
