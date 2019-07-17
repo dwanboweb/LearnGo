@@ -1,0 +1,14 @@
+安装netstat
+yum install net-tools
+查看本机正在监听的端口
+netstat -tlnup
+打开关闭端口
+打开：
+# iptables -I INPUT -p tcp --dport 9000 -j ACCEPT
+# iptables -I OUTPUT -p tcp --dport 9000 -j ACCEPT
+关闭：
+# iptables -I INPUT -p tcp --dport 9000 -j DROP
+# iptables -I OUTPUT -p tcp --dport 9000 -j DROP
+Vi
+ESC进入命令模式：
+:w 保存  :wq 保存退出 :q不保存退出
