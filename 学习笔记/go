@@ -1,0 +1,32 @@
+测试文件以_testing结尾
+调用t.Errorf输出测试失败的结果
+在测试中调用 t.Helper()的方法可以避免错误输出在当前方法内，而是调用此方法的地方 (t是指*testing.T)
+assertCorrectMessage := func(t *testing.T, got, want string) {
+		 t.Helper()
+		if got != want {
+			t.Errorf("got %q want %q", got, want)
+		}
+	}
+子测试用t.Run方法:func (t *T) Run(name string, f func(t *T)) bool
+压力测试func BenchmarkRepeat(b *testing.B) 用b.N循环
+
+go可以把方法作为另一个方法的接收器，来使得方法作为接口使用
+关闭通道后，读取（若无缓冲区或缓冲区数据已读完）会得到0和false的返回值
+
+reflection:
+func ValueOf(i interface{}) Value
+func (v Value) Field(i int) Value
+func (v Value) NumField() int
+func (v Value) Kind() Kind,Kind其实是uint,reflect包里的常数
+func (v Value) Interface() (i interface{}) //value原本的stuct值，不恰当的参数会导致panic
+func (v Value) Elem() Value //参数要求指针或interface
+Len() Index(i):针对数组和切片
+func (v Value) MapKeys() []Value,MapIndex(key)//针对map
+
+锁
+sync.Mutex
+等待组：
+sync.WaitGroup
+ wg.Add(wantedCount)
+ wg.Done()//异步中 计数减1
+wg.Wait()//同步等待

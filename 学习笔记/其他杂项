@@ -1,0 +1,5 @@
+windows下host位置
+C:\Windows\System32\drivers\etc
+刷新DNS:
+ipconfig /flushdns
+查看git配置:git config --list
